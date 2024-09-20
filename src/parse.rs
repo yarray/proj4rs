@@ -5,7 +5,7 @@
 //! this is a 20Ko gain for the .wasm binary.
 //!
 
-#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
+#[cfg(target_arch = "wasm32")]
 mod wasm {
     //! Use js lib
 
@@ -57,7 +57,7 @@ mod wasm {
     }
 }
 
-#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
+#[cfg(target_arch = "wasm32")]
 pub use wasm::FromStr;
 
 #[cfg(all(not(target_arch = "wasm32"), not(target_os = "unknown")))]

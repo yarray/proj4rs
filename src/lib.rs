@@ -111,7 +111,7 @@ pub mod transform;
 pub use proj::Proj;
 
 // Include wasm entry point for wasm32-unknown-unknown
-#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
+#[cfg(target_arch = "wasm32")]
 mod wasm;
 
 #[cfg(test)]
